@@ -1,5 +1,5 @@
-const section=document.querySelector('section')
-const input =document.querySelector('input');
+const section = document.querySelector('section')
+const input = document.querySelector('input');
 
 input.addEventListener('keyup',()=>{
     let inputvalue=input.value.toUpperCase();
@@ -24,17 +24,36 @@ for(let i of article){
     i.setAttribute('category',x);
 }
 
-for(let i of button){
- 
+for(let i of article){
+    const last=i.firstElementChild.lastElementChild;
+    const x=last.textContent.trim().toUpperCase();
+    const y=Number(x.substring(3))
+    i.setAttribute('data-price',y)
+}
+function highToLow(a,b){
+  let ax=a.getAttribute('data-price');
+  let bx=b.getAttribute('data-price');
+  return bx-ax;
 }
 
+button[0].addEventListener('click',()=>{
+    if(section.firstChild){
+        while(section.firstChild){
+            section.removeChild(section.firstChild)
+        }
+    }
+    section.append(...article.sort(highToLow))
+})
+
 for(let i=1;i<button.length;i++){
-    const displayitem=button[i].getAttribute('data-filer').toUpperCase();
     button[i].addEventListener('click',()=>{
-        if(article[i].getAttribute('category')==displayitem){
-            article[i].style.display=""
-        }else{
-            article[i].style.display="none"
+        const displayitems=button[i].getAttribute('data-filter').toUpperCase();
+        for(let j of article){
+            if(j.getAttribute('category').toUpperCase()==displayitems){
+                j.style.display=""
+            }else{
+                j.style.display="none"
+            }
         }
         section.append(...article)
     })
