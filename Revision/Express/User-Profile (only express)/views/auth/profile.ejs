@@ -1,0 +1,22 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+
+<section class="position-top">
+<h2>welcome to my world <%= user.fullName%>!</h2>
+<h3>FullName : <%=user.fullName%></h3>
+<h3>UserName : <%=user.userName%></h3>
+<h3>Email : <%=user.email%></h3>
+<h3>Mobile : <%=user.tel%></h3>
+<button><a href="/user/edit">Edit</a></button>
+<button>Delete</button>
+</section>
+
+
+
+
+
+
+
+
+
+<%-include('../partials/footer')%>

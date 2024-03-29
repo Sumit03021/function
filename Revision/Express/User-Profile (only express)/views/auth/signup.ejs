@@ -1,0 +1,41 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+
+<section class="position-top">
+  <form action="/register" method="POST">
+    <div>
+      <label for="naam">FullName: </label>
+      <input type="text" name="fullName" id="naam">
+    </div>
+    <div>
+      <label for="user">UserName: </label>
+      <input type="text" name="userName" id="user">
+    </div>
+    <div>
+      <label for="tel">Mobile: </label>
+      <input type="tel" name="tel" id="tel">
+    </div>
+    <div>
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email">
+    </div>
+    <div>
+      <label for="pass">Password: </label>
+      <input type="password" name="password" id="pass">
+    </div>
+    <button>Signup</button>
+  </form>
+  <br>
+  <h5>or</h5>
+  <h4>Do you have a account <span><a href="/login">Login</a></span> Now!</h4>
+</section>
+
+
+
+
+
+
+
+
+
+<%-include('../partials/footer')%>

@@ -1,0 +1,47 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 16px;
+}
+
+.navbar{
+  display: flex;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  width: 100vw;
+  padding: 0rem 1rem;
+  overflow-x: hidden;
+  background-color: yellow;
+}
+.navbar-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  font-size: 1.25rem;
+  list-style: none;
+}
+.navbar-list a{
+  text-decoration: none;
+  color: black;
+}
+
+.position-top{
+  position: relative;
+  top: 60px;
+  width: 50vw;
+  padding: 0rem 1rem;
+  margin: 1rem auto;
+}
+
+
+
+
+
+

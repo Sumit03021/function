@@ -1,0 +1,36 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+
+<section class="position-top">
+    <div>
+      <label for="naam">FullName: </label>
+      <input type="text" name="fullName" id="naam" value="<%=user.fullName%>">
+    </div>
+    <div>
+      <label for="user">UserName: </label>
+      <input type="text" name="userName" id="user" value="<%=user.userName%>">
+    </div>
+    <div>
+      <label for="tel">Mobile: </label>
+      <input type="tel" name="tel" id="tel" value="<%=user.tel%>">
+    </div>
+    <div>
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email" value="<%=user.email%>">
+    </div>
+    <div>
+      <label for="pass">Password: </label>
+      <input type="password" name="password" id="pass" value="<%=user.password%>">
+    </div>
+    <button userId ="<%=user._id%>" onsubmit=EditForm(userId)>Edit account</button>
+</section>
+
+
+
+
+
+
+
+
+
+<%-include('../partials/footer')%>

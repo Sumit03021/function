@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #element{
+      height: 100px;
+      width: 100%;
+      display: flex;
+      color: gold;
+      background-color: black;
+      font-size: 40px;
+    }
+    #element{
+      height: 200px;
+      transform: scale(1.2);
+    }
+    #element:hover{
+      font-size: 50px;
+      color: aqua;
+    }
+    body #element{
+      padding: 10px;
+    }
+    
+    @media screen and (max-width:786px) {
+      #element{
+        font-style: italic;
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- only give that value that selectorText value used for searched  -->
+  <!--  does not use again the loop if assigned new style into it by again calling by same name or different names-->
+  <div id="element">
+    hello, <span>World!</span>
+    <h1>hello h1</h1>
+    <h2>hello h2</h2>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
